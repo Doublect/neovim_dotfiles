@@ -16,9 +16,9 @@ return require('packer').startup(function(use)
   use({ 'rose-pine/neovim', as = 'rose-pine', config = function() vim.cmd('colorscheme rose-pine') end})
 
   use({
-      "folke/trouble.nvim",
+      'folke/trouble.nvim',
       config = function()
-          require("trouble").setup {
+          require('trouble').setup {
               icons = false,
               -- your configuration comes here
               -- or leave it empty to use the default settings
@@ -30,11 +30,13 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
   use('nvim-treesitter/playground')
 
+  use('theprimeagen/vim-be-good')
+
   use('theprimeagen/harpoon')  
   use('theprimeagen/refactoring.nvim')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  use("nvim-treesitter/nvim-treesitter-context");
+  use('nvim-treesitter/nvim-treesitter-context');
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -52,6 +54,7 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 	  }
   }
-
-  use("github/copilot.vim")
+    
+  use('cdelledonne/vim-cmake')
+  use('github/copilot.vim')
 end)
