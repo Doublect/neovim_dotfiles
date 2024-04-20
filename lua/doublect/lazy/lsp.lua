@@ -35,7 +35,7 @@ return {
 
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
-                    
+
                     lspconfig.lua_ls.setup {
                         capabilities = capabilities,
                         settings = {
@@ -49,7 +49,7 @@ return {
                 end,
             }
         })
-        
+
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
         cmp.setup({
